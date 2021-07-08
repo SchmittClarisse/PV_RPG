@@ -18,6 +18,7 @@
 <li>La classe Berzerker (bourrin avec une attaque élevée)</li>
 <li>La classe Assassin (rusé et fourbe)</li>
 
+<br>
 <p>Chacune des classes aura une attaque spéciale spécifique à la classe, coûtant un certain nombre de mana. Chaque tour le joueur choisira s'il désire utiliser l'attaque normale, ou l'attaque spéciale.</p>
 
 <p>Afin de rendre ton code plus lisible, les 5 classes de personnage seront étendues d'une autre classe Character.</p>
