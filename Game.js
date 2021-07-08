@@ -1,25 +1,52 @@
 class Game {
-    constructor(turnLeft = 10) {
-      this.turnLeft = turnLeft;
-      this.currentState = [];
-    }
-    play(){
-      while(this.turnLeft != 0){
-        this.newTurn()
-      }
-    }
-    newTurn() {
-      this.turnLeft = this.turnLeft - 1;
-      let currentTurn = new Turn();
-      let newState = currentTurn.startTurn(this.currentState);
-      this.currentState = newState
-    }
-};
+  constructor(paladin, fighter, monk, assassin, berzerker, turnLeft = 10) {
+    this.paladin = paladin;
+    this.fighter = fighter;
+    this.monk = monk;
+    this.assassin = assassin;
+    this.berzerker = berzerker;
+    this.turnLeft = turnLeft;
+  }
 
-const gameNew = new Game();
+  newTurn = () =>{
+    gaming.startTurn();
+    this.turnLeft--;
+  }
 
-gameNew.currentState.push(character1);
-gameNew.currentState.push(character2);
-gameNew.currentState.push(character3);
+  watchStats = () =>{
+    console.log("");
+    if(paladin.status == "loser"){
+      console.log("Le Paladin " + paladin.name + " est mort... RIP !")
+    } else{
+      console.log("Le Paladin " + paladin.name + " à "+ paladin.hp + " HP" + " et " + paladin.Mana + " Mana")
+    }
+    
+    if(monk.status == "loser"){
+      console.log("Le Monk " + monk.name + " est mort... RIP !")
+    } else{
+      console.log("Le Monk " + monk.name + " à "+ monk.hp + " HP" + " et " + monk.Mana + " Mana")
+    }
 
-gameNew.play();
+    if(assassin.status == "loser"){
+      console.log("L'Assassin " + assassin.name + " est mort... RIP !")
+    } else{
+      console.log("L'Assassin " + assassin.name + " à "+ assassin.hp + " HP" + " et " + assassin.Mana + " Mana")
+    }
+
+    if(berzerker.status == "loser"){
+      console.log("Le Berzerker " + berzerker.name + " est mort... RIP !")
+    } else{
+      console.log("Le Berzerker " + berzerker.name + " à "+ berzerker.hp + " HP" + " et " + berzerker.Mana + " Mana")
+    }
+
+    if(fighter.status == "loser"){
+      console.log("Le Fighter " + fighter.name + " est mort... RIP !")
+    } else{
+      console.log("Le Fighter " + fighter.name + " à "+ fighter.hp + " HP" + " et " + fighter.Mana + " Mana")
+    }
+  }
+}
+
+
+const game1 = new Game (paladin, fighter, monk, assassin, berzerker);
+const fighters = [paladin, fighter, monk, assassin, berzerker]
